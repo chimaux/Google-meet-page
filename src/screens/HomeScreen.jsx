@@ -1,45 +1,41 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import TopMenuBar from '../component/TopMenuBar'
 import {
   MdOutlineEmergencyRecording,
    MdKeyboard, 
-   MdArrowForwardIos,
-   MdArrowBackIosNew
+
   } from "react-icons/md"
-import {
-  RxDotFilled
-  } from "react-icons/rx"
 
 
 function HomeScreen() {
 
 
-  const { imageIndex, setImageIndex } = useState(1);
+  // const { imageIndex, setImageIndex } = useState(1);
 
-  const slides = [
-    {
-      img: "https://www.shutterstock.com/image-photo/interior-small-apartment-living-room-260nw-2154108011.jpg",
+  // const slides = [
+  //   {
+  //     img: "https://www.shutterstock.com/image-photo/interior-small-apartment-living-room-260nw-2154108011.jpg",
      
-      title: "Get a link you can share",
-      description: "Click new meeting to schedule meetings in Google Calendar and send invites to participants",
-      imageIndex:1
-    },
-    {
-      img: "https://exej2saedb8.exactdn.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-2.28.40-PM.png?strip=all&lossy=1&ssl=1",
+  //     title: "Get a link you can share",
+  //     description: "Click new meeting to schedule meetings in Google Calendar and send invites to participants",
+  //     imageIndex:1
+  //   },
+  //   {
+  //     img: "https://exej2saedb8.exactdn.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-2.28.40-PM.png?strip=all&lossy=1&ssl=1",
     
-      title: "Plan ahead",
-      description: "Cick new meeting to schedule meetings in Google Calendar and send invites to participants",
-      imageIndex:2
-    },
-    {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZKiP_n9gPuCJkFTg7NFbnGLK9Mf1J28o8r7cY8XBGgMQcnHlA_vRB5QJ-iM02QCZkgC4&usqp=CAU",
+  //     title: "Plan ahead",
+  //     description: "Cick new meeting to schedule meetings in Google Calendar and send invites to participants",
+  //     imageIndex:2
+  //   },
+  //   {
+  //     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZKiP_n9gPuCJkFTg7NFbnGLK9Mf1J28o8r7cY8XBGgMQcnHlA_vRB5QJ-iM02QCZkgC4&usqp=CAU",
       
-      title: "Your meeeting is safe",
-      description: "No one can join a meeting unless invited or admitted by the host",
-      imageIndex:3
-    },
+  //     title: "Your meeeting is safe",
+  //     description: "No one can join a meeting unless invited or admitted by the host",
+  //     imageIndex:3
+  //   },
 
-  ];
+  // ];
 
 
   // const prevSlide = () => {
@@ -67,7 +63,7 @@ function HomeScreen() {
 <div>
 <div className="grid md:grid-cols-2 lg:gap-x-[400px] ">
 <div className='md:w-[60vw] px-6 lg:px-12'>
-   <p className='text-4xl md:text-5xl text-zinc-700'>Premium video meetings. Now free for everyone</p> 
+   <p className='text-4xl md:text-5xl text-zinc-700 pr-4'>Premium video meetings. Now free for everyone</p> 
  <p className='text-gray-600 mt-[40px] text-lg w-[90vw] sm:w-[90%]'>We re-engineered the service we built for secure business meetings, Google Meet, to make it free and available for all.</p>
 
  <div className='mt-[50px] lg:flex  lg:items-center'>

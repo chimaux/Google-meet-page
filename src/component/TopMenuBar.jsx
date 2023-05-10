@@ -15,7 +15,7 @@ function TopMenuBar() {
           <p className="text-gray-600 text-xl font-semibold mt-[-5px]">Meet</p>
         </div>
         <div className="flex flex-col-reverse items-end sm:flex-row sm:items-center  space-x-6">
-          <p className="text-gray-600 text-md md:text-xl mt-[-5px] ">5:49PM . Tue, May 9</p>
+          <p className="text-gray-600 text-md md:text-xl md:mt-[-5px]  ">5:49PM . Tue, May 9</p>
 
           <div className="flex items-center space-x-3">
             <div className="rounded-full flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-300">

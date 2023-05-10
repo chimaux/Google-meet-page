@@ -51,8 +51,8 @@ function HomeScreen() {
     <>
       <TopMenuBar />
       <div>
-        <div className="grid md:grid-cols-2 lg:gap-x-[400px] ">
-          <div className="md:w-[60vw] px-6 lg:px-12">
+        <div className="grid md:grid-cols-2 lg:gap-x-[400px] mt-12 md:mt-18">
+          <div className="md:w-[60vw] px-6 lg:px-12 mt-8">
             <p className="text-4xl md:text-5xl text-zinc-700 pr-4">
               Premium video meetings. Now free for everyone
             </p>
@@ -62,7 +62,7 @@ function HomeScreen() {
             </p>
 
             <div className="mt-[50px] lg:flex  lg:items-center">
-              <div className="cursor-pointer flex justify-between items-center flex-shrink-0 px-2 w-[150px] h-[50px] bg-blue-600 rounded-md">
+              <div className="cursor-pointer  flex justify-between items-center flex-shrink-0 px-2 w-[150px] h-[50px] bg-blue-600 rounded-md">
                 <MdOutlineEmergencyRecording
                   size={22}
                   className="text-[#fff]"
@@ -93,26 +93,43 @@ function HomeScreen() {
 
           {/* carousel images on nthe right BsChevronRight */}
           <div className="w-[100vw] justify-center md:justify-normal  md:ml-14 mt-8 lg:mt-0 lg:ml-0 lg:w-[35vw] flex items-center  ">
-            <div className=" rounded-full mr-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100">
+        
+
+            <div>
+              <div className="flex items-center">
+              <div className=" rounded-full mr-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100">
               <BsChevronLeft size={22} className="text-gray-500" />
             </div>
-
-            <div
-              className="rounded-full  overflow-hidden flex items-center justify-center w-[300px] h-[300px] bg-no-repeat bg-cover md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]   bg-gray-100"
-              style={{
-                backgroundImage:
-                  "url(https://exej2saedb8.exactdn.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-2.28.40-PM.png?strip=all&lossy=1&ssl=1)",
-              }}
-            >
-              {/* <img
+                <div
+                  className="rounded-full  overflow-hidden flex items-center justify-center w-[300px] h-[300px] bg-no-repeat bg-cover md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]   bg-gray-100"
+                  style={{
+                    backgroundImage:
+                      "url(https://exej2saedb8.exactdn.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-2.28.40-PM.png?strip=all&lossy=1&ssl=1)",
+                  }}
+                >
+                  {/* <img
             src="https://exej2saedb8.exactdn.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-2.28.40-PM.png?strip=all&lossy=1&ssl=1"
             alt="icon"
           /> */}
-            </div>
-
-            <div className=" rounded-full ml-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100">
+                </div>
+                <div className=" rounded-full ml-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100">
               <BsChevronRight size={20} className="text-gray-500" />
             </div>
+              </div>
+        <div className="flex justify-center">
+        <div className="  w-[300px] h-[300px]  md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]">
+                <p className="text-xl text-center font-semibold text-zinc-700 my-4">
+                  Get a link you can share
+                </p>
+                <p className=" text-zinc-700 my-2 text-center">
+                  Click new meeting to schedule meetings in Google Calendar and
+                  send invites to participants
+                </p>
+              </div>
+        </div>
+            </div>
+
+          
           </div>
 
           <footer>

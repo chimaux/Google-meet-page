@@ -1,7 +1,7 @@
 // import React, { useState } from 'react'
 import TopMenuBar from "../component/TopMenuBar";
 import { MdOutlineEmergencyRecording, MdKeyboard } from "react-icons/md";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { BsChevronLeft, BsChevronRight, BsDot } from "react-icons/bs";
 import { useState } from "react";
 
 function HomeScreen() {
@@ -13,21 +13,21 @@ function HomeScreen() {
 
       title: "Get a link you can share",
       description: "Click new meeting to schedule meetings in Google Calendar and send invites to participants",
-      imageIndex:1
+      Index:0
     },
     {
       img: "https://www.gstatic.com/meet/user_edu_scheduling_light_b352efa017e4f8f1ffda43e847820322.svg",
 
       title: "Plan ahead",
       description: "Cick new meeting to schedule meetings in Google Calendar and send invites to participants",
-      imageIndex:2
+      Index:1
     },
     {
       img: "https://www.gstatic.com/meet/user_edu_safety_light_e04a2bbb449524ef7e49ea36d5f25b65.svg",
 
       title: "Your meeeting is safe",
       description: "No one can join a meeting unless invited or admitted by the host",
-      imageIndex:3
+      Index:2
     },
 
   ];
@@ -138,6 +138,15 @@ function HomeScreen() {
                 <p className=" text-zinc-700 my-2 text-center">
                 {slides[imageIndex].description}
                 </p>
+                <div className="w-[300px] h-[300px] flex justify-center">
+{imageIndex === 0 ? <BsDot size={20} className={`text-blue-700`}/>: 
+<BsDot size={20} className={`text-gray-500`}/>}
+{imageIndex === 1 ? <BsDot size={20} className={`text-blue-700`}/>: 
+<BsDot size={20} className={`text-gray-500`}/>}
+{imageIndex === 2 ? <BsDot size={20} className={`text-blue-700`}/>: 
+<BsDot size={20} className={`text-gray-500`}/>}
+
+                </div>
               </div>
         </div>
             </div>

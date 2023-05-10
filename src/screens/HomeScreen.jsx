@@ -2,34 +2,35 @@
 import TopMenuBar from "../component/TopMenuBar";
 import { MdOutlineEmergencyRecording, MdKeyboard } from "react-icons/md";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { useState } from "react";
 
 function HomeScreen() {
-  // const { imageIndex, setImageIndex } = useState(1);
+   const [ imageIndex, setImageIndex ] = useState(0);
 
-  // const slides = [
-  //   {
-  //     img: "https://www.shutterstock.com/image-photo/interior-small-apartment-living-room-260nw-2154108011.jpg",
+  const slides = [
+    {
+      img: "https://www.gstatic.com/meet/user_edu_get_a_link_light_90698cd7b4ca04d3005c962a3756c42d.svg",
 
-  //     title: "Get a link you can share",
-  //     description: "Click new meeting to schedule meetings in Google Calendar and send invites to participants",
-  //     imageIndex:1
-  //   },
-  //   {
-  //     img: "https://exej2saedb8.exactdn.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-2.28.40-PM.png?strip=all&lossy=1&ssl=1",
+      title: "Get a link you can share",
+      description: "Click new meeting to schedule meetings in Google Calendar and send invites to participants",
+      imageIndex:1
+    },
+    {
+      img: "https://www.gstatic.com/meet/user_edu_scheduling_light_b352efa017e4f8f1ffda43e847820322.svg",
 
-  //     title: "Plan ahead",
-  //     description: "Cick new meeting to schedule meetings in Google Calendar and send invites to participants",
-  //     imageIndex:2
-  //   },
-  //   {
-  //     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZKiP_n9gPuCJkFTg7NFbnGLK9Mf1J28o8r7cY8XBGgMQcnHlA_vRB5QJ-iM02QCZkgC4&usqp=CAU",
+      title: "Plan ahead",
+      description: "Cick new meeting to schedule meetings in Google Calendar and send invites to participants",
+      imageIndex:2
+    },
+    {
+      img: "https://www.gstatic.com/meet/user_edu_safety_light_e04a2bbb449524ef7e49ea36d5f25b65.svg",
 
-  //     title: "Your meeeting is safe",
-  //     description: "No one can join a meeting unless invited or admitted by the host",
-  //     imageIndex:3
-  //   },
+      title: "Your meeeting is safe",
+      description: "No one can join a meeting unless invited or admitted by the host",
+      imageIndex:3
+    },
 
-  // ];
+  ];
 
   // const prevSlide = () => {
   //   const isFirstSlide = imageIndex === 0;
@@ -37,16 +38,25 @@ function HomeScreen() {
   //   setImageIndex(isNextSlide);
   // };
 
-  // const nextSlide = () => {
-  //   const isLastSlide = imageIndex === slides.length - 1;
-  //   const isNextSlide = isLastSlide ? 0 : imageIndex + 1;
-  //   setImageIndex(isNextSlide);
-  // };
+
 
   // const goToSlide = (i) => {
   //   setImageIndex(i);
   // };
 
+
+  const moveRight =()=>{
+    const isLastSlide = imageIndex === slides.length - 1;
+    const isNextSlide = isLastSlide ? 0 : imageIndex + 1;
+    setImageIndex(isNextSlide);
+
+  }
+  const moveLeft =()=>{
+      const isFirstSlide = imageIndex === 0;
+    const isNextSlide = isFirstSlide ? slides.length - 1 : imageIndex - 1;
+    setImageIndex(isNextSlide);
+
+  }
   return (
     <>
       <TopMenuBar />
@@ -97,14 +107,16 @@ function HomeScreen() {
 
             <div>
               <div className="flex items-center">
-              <div className=" rounded-full mr-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100">
+              <div className=" rounded-full mr-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100"
+              onClick={moveLeft}
+              >
               <BsChevronLeft size={22} className="text-gray-500" />
             </div>
                 <div
-                  className="rounded-full  overflow-hidden flex items-center justify-center w-[270px] h-[270px] bg-no-repeat bg-cover md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]   bg-gray-100"
+                  className="rounded-full  overflow-hidden flex items-center justify-center w-[270px] h-[270px] bg-no-repeat bg-cover md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]  2xl:w-[330px] 2xl:h-[330px]  bg-gray-100"
                   style={{
                     backgroundImage:
-                      "url(https://exej2saedb8.exactdn.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-2.28.40-PM.png?strip=all&lossy=1&ssl=1)",
+                      `url(${slides[imageIndex].img})`,
                   }}
                 >
                   {/* <img
@@ -112,18 +124,19 @@ function HomeScreen() {
             alt="icon"
           /> */}
                 </div>
-                <div className=" rounded-full ml-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100">
+                <div className=" rounded-full ml-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100"
+                onClick={moveRight}
+                >
               <BsChevronRight size={20} className="text-gray-500" />
             </div>
               </div>
         <div className="flex justify-center">
         <div className="  w-[300px] h-[300px]  md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]">
                 <p className="text-xl text-center font-semibold text-zinc-700 my-4">
-                  Get a link you can share
+                {slides[imageIndex].title}
                 </p>
                 <p className=" text-zinc-700 my-2 text-center">
-                  Click new meeting to schedule meetings in Google Calendar and
-                  send invites to participants
+                {slides[imageIndex].description}
                 </p>
               </div>
         </div>

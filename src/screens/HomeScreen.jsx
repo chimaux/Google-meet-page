@@ -5,31 +5,33 @@ import { BsChevronLeft, BsChevronRight, BsDot } from "react-icons/bs";
 import { useState } from "react";
 
 function HomeScreen() {
-   const [ imageIndex, setImageIndex ] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
 
   const slides = [
     {
       img: "https://www.gstatic.com/meet/user_edu_get_a_link_light_90698cd7b4ca04d3005c962a3756c42d.svg",
 
       title: "Get a link you can share",
-      description: "Click new meeting to schedule meetings in Google Calendar and send invites to participants",
-      Index:0
+      description:
+        "Click new meeting to schedule meetings in Google Calendar and send invites to participants",
+      Index: 0,
     },
     {
       img: "https://www.gstatic.com/meet/user_edu_scheduling_light_b352efa017e4f8f1ffda43e847820322.svg",
 
       title: "Plan ahead",
-      description: "Cick new meeting to schedule meetings in Google Calendar and send invites to participants",
-      Index:1
+      description:
+        "Cick new meeting to schedule meetings in Google Calendar and send invites to participants",
+      Index: 1,
     },
     {
       img: "https://www.gstatic.com/meet/user_edu_safety_light_e04a2bbb449524ef7e49ea36d5f25b65.svg",
 
       title: "Your meeeting is safe",
-      description: "No one can join a meeting unless invited or admitted by the host",
-      Index:2
+      description:
+        "No one can join a meeting unless invited or admitted by the host",
+      Index: 2,
     },
-
   ];
 
   // const prevSlide = () => {
@@ -38,25 +40,20 @@ function HomeScreen() {
   //   setImageIndex(isNextSlide);
   // };
 
-
-
   // const goToSlide = (i) => {
   //   setImageIndex(i);
   // };
 
-
-  const moveRight =()=>{
+  const moveRight = () => {
     const isLastSlide = imageIndex === slides.length - 1;
     const isNextSlide = isLastSlide ? 0 : imageIndex + 1;
     setImageIndex(isNextSlide);
-
-  }
-  const moveLeft =()=>{
-      const isFirstSlide = imageIndex === 0;
+  };
+  const moveLeft = () => {
+    const isFirstSlide = imageIndex === 0;
     const isNextSlide = isFirstSlide ? slides.length - 1 : imageIndex - 1;
     setImageIndex(isNextSlide);
-
-  }
+  };
   return (
     <>
       <TopMenuBar />
@@ -102,21 +99,19 @@ function HomeScreen() {
           </div>
 
           {/* carousel images on nthe right BsChevronRight */}
-          <div className="w-[100%] justify-center md:justify-normal  md:ml-14 mt-8 lg:mt-0 lg:ml-0 lg:w-[35vw] flex items-center  ">
-        
-
+          <div className="w-[95%] justify-center md:justify-normal  md:ml-14 mt-8 lg:mt-0 lg:ml-0 lg:w-[35vw] flex items-center  ">
             <div>
               <div className="flex items-center">
-              <div className=" rounded-full mr-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100"
-              onClick={moveLeft}
-              >
-              <BsChevronLeft size={22} className="text-gray-500" />
-            </div>
                 <div
-                  className="rounded-full  overflow-hidden flex items-center justify-center w-[270px] h-[270px] bg-no-repeat bg-cover md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]  2xl:w-[330px] 2xl:h-[330px]  bg-gray-100"
+                  className=" rounded-full mr-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100"
+                  onClick={moveLeft}
+                >
+                  <BsChevronLeft size={18} className="text-gray-500" />
+                </div>
+                <div
+                  className="rounded-full  overflow-hidden flex items-center justify-center w-[250px] h-[250px] sm:w-[270px] sm:h-[270px] bg-no-repeat bg-cover md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]  2xl:w-[330px] 2xl:h-[330px]  bg-gray-100"
                   style={{
-                    backgroundImage:
-                      `url(${slides[imageIndex].img})`,
+                    backgroundImage: `url(${slides[imageIndex].img})`,
                   }}
                 >
                   {/* <img
@@ -124,34 +119,41 @@ function HomeScreen() {
             alt="icon"
           /> */}
                 </div>
-                <div className=" rounded-full ml-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100"
-                onClick={moveRight}
+                <div
+                  className=" rounded-full ml-2 flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-100"
+                  onClick={moveRight}
                 >
-              <BsChevronRight size={20} className="text-gray-500" />
-            </div>
-              </div>
-        <div className="flex justify-center">
-        <div className="  w-[300px] h-[300px]  md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]">
-                <p className="text-xl text-center font-semibold text-zinc-700 my-4">
-                {slides[imageIndex].title}
-                </p>
-                <p className=" text-zinc-700 my-2 text-center">
-                {slides[imageIndex].description}
-                </p>
-                <div className="w-[300px] h-[300px] flex justify-center">
-{imageIndex === 0 ? <BsDot size={20} className={`text-blue-700`}/>: 
-<BsDot size={20} className={`text-gray-500`}/>}
-{imageIndex === 1 ? <BsDot size={20} className={`text-blue-700`}/>: 
-<BsDot size={20} className={`text-gray-500`}/>}
-{imageIndex === 2 ? <BsDot size={20} className={`text-blue-700`}/>: 
-<BsDot size={20} className={`text-gray-500`}/>}
-
+                  <BsChevronRight size={18} className="text-gray-500" />
                 </div>
               </div>
-        </div>
+              <div className="flex justify-center">
+                <div className="  w-[300px] h-[300px]  md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]">
+                  <p className="text-xl text-center font-semibold text-zinc-700 my-4">
+                    {slides[imageIndex].title}
+                  </p>
+                  <p className=" text-zinc-700 my-2 text-center">
+                    {slides[imageIndex].description}
+                  </p>
+                  <div className="w-[300px] h-[300px] flex justify-center">
+                    {imageIndex === 0 ? (
+                      <BsDot size={20} className={`text-blue-700`} />
+                    ) : (
+                      <BsDot size={20} className={`text-gray-500`} />
+                    )}
+                    {imageIndex === 1 ? (
+                      <BsDot size={20} className={`text-blue-700`} />
+                    ) : (
+                      <BsDot size={20} className={`text-gray-500`} />
+                    )}
+                    {imageIndex === 2 ? (
+                      <BsDot size={20} className={`text-blue-700`} />
+                    ) : (
+                      <BsDot size={20} className={`text-gray-500`} />
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
-
-          
           </div>
 
           <footer>

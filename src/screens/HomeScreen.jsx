@@ -92,7 +92,7 @@ function HomeScreen() {
           </div>
 
           {/* carousel images on nthe right BsChevronRight */}
-          <div className="w-[100vw] justify-center md:justify-normal  md:ml-14 mt-8 lg:mt-0 lg:ml-0 lg:w-[35vw] flex items-center  ">
+          <div className="w-[100%] justify-center md:justify-normal  md:ml-14 mt-8 lg:mt-0 lg:ml-0 lg:w-[35vw] flex items-center  ">
         
 
             <div>

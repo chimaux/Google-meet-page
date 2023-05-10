@@ -18,16 +18,16 @@ function TopMenuBar() {
           <p className="text-gray-600 text-md md:text-xl md:mt-[-5px]  ">5:49PM . Tue, May 9</p>
 
           <div className="flex items-center space-x-3">
-            <div className="rounded-full flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-300">
+            <div className="rounded-full flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-200">
               <AiOutlineQuestionCircle size={28} className="text-gray-500" />
             </div>
-            <div className="rounded-full flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-300">
+            <div className="rounded-full flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-200">
               <BsChatLeftDots size={25} className="text-gray-500" />
             </div>
-            <div className="rounded-full flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-300">
+            <div className="rounded-full flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-200">
               <AiOutlineSetting size={28} className="text-gray-500" />
             </div>
-            <div className="rounded-full flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-300">
+            <div className="rounded-full flex items-center justify-center w-[40px] h-[40px] hover:bg-gray-200">
               <CgMenuGridO size={28} className="text-gray-500" />
             </div>
             <div className="rounded-full overflow-hidden flex items-center justify-center w-[38px] h-[38px] bg-gray-300">

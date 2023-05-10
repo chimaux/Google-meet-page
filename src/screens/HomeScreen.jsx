@@ -101,7 +101,7 @@ function HomeScreen() {
               <BsChevronLeft size={22} className="text-gray-500" />
             </div>
                 <div
-                  className="rounded-full  overflow-hidden flex items-center justify-center w-[300px] h-[300px] bg-no-repeat bg-cover md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]   bg-gray-100"
+                  className="rounded-full  overflow-hidden flex items-center justify-center w-[270px] h-[270px] bg-no-repeat bg-cover md:w-[250px] md:h-[250px] lg:w-[260px] lg:h-[260px] xl:w-[300px] xl:h-[300px]   bg-gray-100"
                   style={{
                     backgroundImage:
                       "url(https://exej2saedb8.exactdn.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-2.28.40-PM.png?strip=all&lossy=1&ssl=1)",

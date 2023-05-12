@@ -1,4 +1,4 @@
-#Google Meet join Meeting Page
+#Google Meet page
 
 This is a single page clone of one of google products called Google Meet.
 I used ReactJS, HTML and CSS, and Tailwind to do this.
